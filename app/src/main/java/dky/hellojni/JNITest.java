@@ -9,4 +9,5 @@ public class JNITest {
     }
 
     public static native String getSring();
+    public static native int MyAdd(int n1, int n2);
 }

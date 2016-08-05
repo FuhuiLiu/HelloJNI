@@ -24,6 +24,10 @@ jstring getSring(JNIEnv *env,jclass type)
 {
     return env->NewStringUTF("hehe");
 }
+jint MyAdd(JNIEnv *env,jclass type, jint n1, jint n2)
+{
+    return n1 + n2;
+}
 
 static int registerNativeMethods(JNIEnv *env, const char *className,
                                  JNINativeMethod *gMethods, int numMethods) {
@@ -41,6 +45,7 @@ static int registerNativeMethods(JNIEnv *env, const char *className,
 static const char *gClassName = "dky/hellojni/JNITest";
 static JNINativeMethod gMethods[] = {
         {"getSring", "()Ljava/lang/String;", (void *)getSring},
+        {"MyAdd", "(II)I", (void *)MyAdd},
 };
 
 JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *reserved) {

@@ -6,7 +6,7 @@ model{
 
         defaultConfig.with {
             applicationId = "dky.hellojni"
-            minSdkVersion.apiLevel  = 15  // Unable to load class com.android.build.gradle.managed.ProductFlavor_Impl
+            minSdkVersion.apiLevel  = 19  // Unable to load class com.android.build.gradle.managed.ProductFlavor_Impl
             targetSdkVersion.apiLevel = 23
             versionCode = 1
             versionName = "1.0"
